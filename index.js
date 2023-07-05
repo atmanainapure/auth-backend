@@ -4,7 +4,7 @@ const connectMongo = require('./db');
 connectMongo();
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT||3000
 
 //we have to tell express to use json. This is a middleware that will parse the json data from the request body.
 app.use(express.json())
